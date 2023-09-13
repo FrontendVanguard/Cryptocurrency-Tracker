@@ -1,15 +1,33 @@
 import React from "react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 import { CoinsTable } from "./components/CoinsTable/CoinsTable";
+import { CoinsCharts } from "./components/CoinsCharts/CoinsCharts";
+import { Header } from "./components/Header/Header";
 
-import { ReactComponent as CoingeckoLogo } from "./assets/coingecko.svg";
 import { Wrapper } from "./styles";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Header />
+        <Outlet />
+      </>
+    ),
+
+    children: [
+      { path: "coins", element: <CoinsTable /> },
+      { path: "charts", element: <CoinsCharts /> },
+    ],
+  },
+]);
 
 export const App: React.FC = () => {
   return (
     <Wrapper>
-      <CoingeckoLogo className="coingecko_logo" />
-      <CoinsTable />
+      <RouterProvider router={router} />
     </Wrapper>
   );
 };

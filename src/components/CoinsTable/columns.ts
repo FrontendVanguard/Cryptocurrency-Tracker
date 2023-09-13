@@ -7,14 +7,15 @@ export const coinsColumns = [
     headerName: "Price (USD)",
     width: 200,
     type: "number",
-    valueFormatter: ({ value }: any) => `$${value}`,
+    valueFormatter: ({ value }: { value: number }) => `$${value}`,
   },
   {
     field: "market_cap",
     headerName: "Market Cap",
     width: 200,
     type: "number",
-    valueFormatter: ({ value }: any) => `$${value.toLocaleString()}`,
+    valueFormatter: ({ value }: { value: number }) =>
+      `$${value.toLocaleString()}`,
   },
   {
     field: "market_cap_rank",

@@ -6,3 +6,17 @@ export type Coin = {
   market_cap: number;
   market_cap_rank: number;
 };
+
+export type MarketChartDataType = {
+  prices: [number, number][];
+};
+
+export type ChartDataType = {
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor: string;
+    fill: boolean;
+  }[];
+};
