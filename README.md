@@ -1,12 +1,12 @@
 ### Installation and setup 
 
-## download project repository
+# download project repository
 
-## run 'npm install' to install all required modules and dependencies 
+# run 'npm install' to install all required modules and dependencies 
 
-## run 'npm run start' to run project
+# run 'npm run start' to run project
 
-## visit http://localhost:3000/
+# visit http://localhost:3000/
 
 
 
